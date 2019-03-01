@@ -1,0 +1,181 @@
+#Test Designing
+
+	1 ==> "Preparation of scenario/conditions"
+							Step 1: Basic Scenario(/Functional)
+							Step 2: Field validation Scenario(/Exceptional)
+							Step 3: Alternate Scenario(/Flow)
+
+
+		Tech's:
+ 			Use Case - involves activity only
+			ACE(Activity Component Element) -- >  studying scenario in depth including activity, component(fields) used and the elements involved
+
+
+
+
+	==> Preparation of Test Data
+					Tech to derive test data --> 
+									Consider age = TB where 24<age<51
+		
+									ECP --> Equivalence Class Partioning --> test for any valid case(age between 25 and 50) and invalid data(age<25 && age>50) --> total 3 states 
+									BVA --> Boundry Value Analysis -->
+													Possible Cases -->
+														L-1	L(BV)	L+1 	H-1	H(BV) 	H+1
+
+																			i.e check for boundry values thus atleast 4 cases i.e here L-1,L,H,H+1
+				
+				
+
+
+									Decision Table(ECP + BVA) --> predicts expected result 
+												for all possible values  
+														i.e 	L-1	L	L+1	H-1	H	H+1 
+												
+																			--> at least 5 cases
+
+
+
+									eg username ==> isAlpha(username) and username.length>3 && username.length<11
+														
+														ECP --> Nik(3) - 0
+															Nikhil(6) - 1,	 
+															NikhilGuptaa(11) - 0,
+																	-0
+
+															
+															1234##/abcd##/abcd12/######/123456(6) - 0
+															
+	
+
+
+														BVA --> Nik(3) - 0
+ 															Nike(4)* - 1
+															$Nikhil(6) - 1
+															NikhilGupta(10)* - 1
+															NikhilGuptaa(11) - 0 
+																	-0
+
+
+															
+															1234##/abcd##/abcd12/######/123456(6) - 0
+															
+
+
+												     Decision Table --> Nik(3) - 0
+															Nike(4) - 1
+															Nikhil(6) - 1
+															Nikhilaaa(9) - 1
+															NikhilGupta(10) - 1
+															NikhilGuptaa(11) - 0
+																	-0
+
+
+															
+															######/123456(6) - 0
+														
+
+
+
+											Password.equals(mercury) ==>
+															ECP --> mercury - 1
+																Mercury - 1
+																1234###/abcd###/abcd123/abcdefg/1234567/####### - 0
+																	- 0
+															
+															BVA --> mercury - 1
+																Mercury - 1
+
+													      Decision Table--> mercury - 1
+																Mercury - 1
+
+
+
+
+
+
+
+
+
+
+					#Test Cases --> Test ID , Test Case Description, Test Pre-requisite, Stop to execute, Expectted Result, Actual Result
+
+
+
+
+
+Verification/Review/Inspection ==>
+ 
+				Self Review >> Author review >>bugs fixed by author only >> No Reviews/Reports/Doc's
+				Peer to Peer Review(Unformal Review) >> check doc. for formal review >> bugs are to be fixed by author only >> No Review,report or doc prepared
+				Formal Review >> Signing Off the doc's >> author may be present >> bugs fixed by author >> Review/Report/Doc's are prepared
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+property radio
+name
+email
+mobile code list
+mob no
+city list
+location
+
+budget min list
+budget max list
+
+property type list
+time period list
+are you a real state agent radio
+note - text
+
+post my requirements button
+
+
+
+
+Email
+ANS - IN
+ANS - Blank
+A - V
+N - V
+S - V
+AN - V
+AS - V
+NS - V
+Blank - Blank
+Blank - V
+
+
+
+B-M/Max
+//I/I - I
+V/I - I
+//I/V - I
+
+B/V - I
+V/B - I
+B/B - I
+//B/I - I
+//I/B - I
+V/V - I
+	

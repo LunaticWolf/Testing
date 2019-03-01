@@ -1,0 +1,57 @@
+Documentation ==> 
+
+		- identify test requirements
+		Create Test Strategy & Test Plans
+		Create Test Scenario >> identify conditions 
+		Test Cases >> Analysis
+				-identify test cases(execute)
+		Test Case Execution
+		
+
+
+
+
+
+
+
+
+
+		Test Cases - Identify the test case(exe.)
+
+				- Identify test data's 
+				- Updation of RTM
+
+				--> Test Case Execution(Sys. testing)
+
+
+		
+
+		Defect Life Cycle --> appln/tester
+
+			New    ------>   reject/Duplicate/Deferred(later)
+			Open   ------>   Assigned to developer --> Fixed by tester --> Retesting/Regression
+
+			Close/Re-Open
+
+
+
+
+
+		Test Execution(Sys. Test Cases - All Requirements)
+
+		Release		SD(Start Date) 					ED(End Date)
+		
+			Cycle
+				Cycle 1 --> Sys. Testing
+				
+
+				Cycle 2 --> Sys.Test + Regression 
+	
+				
+				Cycle 3 --> Regression 
+
+
+
+				for each cycle--> 
+						Test Summary - N
+						Test Closure - 1

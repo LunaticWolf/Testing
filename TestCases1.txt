@@ -1,0 +1,69 @@
+Valid conditions
+
+
+username.chatAt(i).matches("/[A-za-z]/");
+username.length() >=4 && <=10
+if(pwd.toLowercase().equals("mercury"));
+
+password=="mercury"/
+	eg - "Mercury"/mErcury/meRcury/merCury/mercUry/mercuRy/mercurY
+		MErcury/MERcury/MErCury/MErcUry/MErcuRy/MErcurY/
+		MERcury/MERCury/MERCUry/MERCURy/MECURY/......
+	(all lower/uppercases combination of "mercury")
+
+Ok == submits form 
+Cancel = resets or cancel the submission of form 
+
+
+Invalid Conditions 
+username.length < 3
+username.length > 10
+username.chatAt(i) == wild char
+username.charAt(i) == number,float,double
+
+
+password !=mercury/Mercury
+password == wild char
+password == number
+
+
+OK == button submits the form to server
+Cancels == resets the submission 
+
+
+
+Cases
+
+Nikhil/mercury - 1
+Nikhil/Mercury - 1
+Yang/Mercury - 1
+Yang/merCURY - 1
+SheldonCSW/mercury - 1
+NikhilGupta/MERCURY - 1
+NIKHILGUPTA/MERCURY - 1
+
+Invalid
+Nik/Mercury - 0
+N/Mercury - 0
+n/Mercury - 0
+Nikhil Gupta/Mercury - 0
+
+Nikhil#/Mercury - 0
+Nikhil1/Mercury - 0
+123456/Mercury - 0
+######/Mercury - 0
+@#$$%%%^/Mercury - 0
+Nikhil/123456 - 0
+Nikhil/##### - 0
+Nikhil/@#%$$%^ - 0
+*/* - 0
+Nikhil7.00/Mercury - 0
+
+
+
+No Inputs - 
+/ - 0
+Nikhil/ - 0
+/Mercury - 0
+***/ - 0
+/*** - 0

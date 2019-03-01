@@ -1,0 +1,30 @@
+Fundamentals of Knowledge Transition(KT) and Req. analysis(RA)
+
+KT - info gathering
+Fiseablity Study before starting the procedure... 
+
+
+PDCA - Plan Do Check Analyse
+
+
+Project Understanding doc.
+ 1 ==> Knowledge Plan - documenting all Possiblities
+ 2 ==> Knowledge Acquisation(Sys. understanding doc.) - gathering client side data 
+
+	KT Modes==> 
+		using Knowledge Repo.(history)
+
+
+ 3 ==> Knowledge Validation/Reverse Knowledge Transition - Validating possiblities 
+		(SME )"Subject Matter Expert" --> acts as supervisor and evaluator & states Threshold value for the doc.
+
+
+ 4 ==> Knowledge Retention -
+			involves capturing knowledge in the organization so that it can be used later. 
+
+
+
+
+Req Gathering - Elicitation, Prototypes, Use Case etc.
+
+Req Analysis - User, System, Missing, Wrong, Complete,Incomplete,functional

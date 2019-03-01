@@ -1,0 +1,83 @@
+Fundamentals of Test Strategy and Test Plan
+
+
+
+		History
+			of Testing ==> 
+
+					Debugging Oriented
+					Demostration Orientation
+					Destruction Orientation(1970/80)
+								-No Common Approach(afterward Came up with the modern testing approach)
+
+								QAI(Quality Assurance Institute) - US
+								ISTQB(International Software Testing Qualifications Board)- UK --> Provides Certification and standards for modern testing.	
+
+					Evaluation Orientation >> uses validators only
+								- Used Common Approach
+
+					Prevention Orientation >> uses verifiers and validators
+
+
+
+
+
+
+
+ #Test Strategy
+
+			#Note - In SDLC for a soft, sys. testing has to be done at least once.
+
+	
+	System Apps -> Fresh App(from the scratch) --Types of testing to perform --> Sys. Testing(Mandatory) + others(depending upon the req's)
+			Maintenance App -- Type of tests to perform --> "Regression Testing for the new added req."
+
+									Regression Testing - used to check the functionality of newly added req.
+												verify its affects over old.
+
+											Suppose R5 is added to R1,R2,R3,R4
+													So we perform regg. over R5 and verify its affects over others using "Impact Analysis"
+
+
+
+			Strategy --> Choose the +=
+							Types of Testing
+  		
+							Levels of testing ->    Start(initial cond's)
+										Entry
+										Suspension 
+										Resumption
+										Exit
+										Stop -> Acceptance Criteria
+
+
+
+
+
+
+
+#Test Plan 
+
+		
+		Plan 	
+		Set MileStone
+		Resources
+		Schedule
+		Risk Analysis - analyse risk involved
+		Contigency Plan - back ups
+		Mitigation Plan
+
+
+#Note - For Smaller Projects, 
+			Create a Master Doc.(ts tp)
+
+
+
+
+
+
+
+
+
+
+

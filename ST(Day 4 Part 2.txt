@@ -1,0 +1,80 @@
+Fundamentals Of Test Cases
+
+		Doc's Preparation --> 
+					Updating test Log --> for Passed and Failed test cases
+
+					Defect Log --> only for failed Test cases
+
+
+		Terms ==> 
+				Status TC - 
+				Pass / Fail --> Pass only of all checked
+				Blocked --> eg. - if Login Module failed
+				In Progress
+				In-Complete  
+
+
+
+
+
+
+Testing --> Manual V/s Automatically(Tools)
+
+
+	Manual >> - tests are executed manually by a QA Analysts.
+		  - performed to discover bugs in software under development.
+ 	  	  - tester checks all the essential features of the given application or software.
+   	 	  - the software testers execute the test cases and generate the test reports without the help of any automation software testing tools.
+		  - Sys. Testing 
+
+
+	Automation T.? >> - testers write code/test scripts to automate test execution. 
+			  - Testers use appropriate automation tools to develop the test scripts and validate the software.
+			  - relies on the pre-scripted test which runs automatically to compare actual result with the expected results.
+			  - Regression Testing.
+
+
+	Diff's between M & A >>
+				executed by QA/script execution , slow/fast
+
+
+
+	Types of Testing Tools >>
+					Test Management tools - TET(Test Env. ToolKit), TETware, Test Manager, RTH
+
+					Functional Testing Tools - Selenium, Soapui, Watir, HTTP::Recorder, WatiN, Canoo WebTest, Webcorder, Solex, Imprimatur
+									SAMIE, Swete ,ITP, WET, WebInject, Katalon Studio
+				
+					Load Testing Tools - JMeter, FunkLoad
+  
+
+
+
+	Test Management Tool --> 
+				- Identify & Collect Test Req.
+				- Plan 
+					-Release
+						-Cycles...
+
+
+				- Prepare Test cases 
+				- Execute Test Cases
+				- Prepare Defect Log.
+				- Prepare/Update RTM 
+				- Prepare Test Rummary Report
+				- Prepare Test Closure Report.
+
+								eg - ALM(HP) - Application LifeCycle Management.
+
+
+
+
+	Use of RTM --> 
+
+			Requirement Coverage --> All the req's present in the soft. has been tested or not(at least once).
+						 eg. RTM
+
+			Test Coverage -->  All the test cases prepared for the testing the soft has been executed or not.
+
+
+			RTM Template - > Sno. Req ID, Req description, TS-id, TC-id, Defect ID			

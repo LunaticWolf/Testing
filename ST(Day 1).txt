@@ -1,0 +1,126 @@
+S.T. >> Process of evaluating or validating the app/prod./soft. to check whether ER=AR or not
+
+SDLC Phases -
+	<head>---Fiseablity Study---
+ 1 ==> Req. Gathering and Analysis
+ 2 ==> Design
+ 3 ==> C/D >> WBT >>
+
+
+ 4 ==> "TESTING" ==> 
+		>> BBT >> Mandatory >> Validating and Evaluating >> Validator(check for I/p and compare it to Expected O/p)(<<<<<<<<<< 'QC' >>>>>>>>>>>)
+ 		and Verifier(<<<<<<< 'QA' >>>>>>>>)(SQA creates test case CHECKLIST's)
+
+	Term - 
+		Defect >> Root cause analysis
+
+
+	       
+  	         Structure - 
+
+			TEST DESIGNS ==> Preparations
+                               				  1 ==>  Scenarios (Possible Encounters & Conditions)		]
+				 			  2 ==> Cases (w.r.t test scenarios)			] --> Verified By SQA
+				 			  3 ==> Data (sample data for above cases)			]
+
+
+
+		TYPES ==>
+		   #Based on Functionality, 
+			Functional T. ==>
+			      "Build Verification T."(Partially Build Product) a.k.a ...   " BVT/Smoke/Sanity "
+						"Smoke or Sanity" (need to verify and remove any critical defects in build) 
+							Smoke - verify (basics) that the implementations(basic req.) done in a build are working fine. 
+							Sanity - verify the newly added functionalities, bugs etc. are working fine.
+
+
+				#Note - > Defect Types --> Critical(Show Stopper)  --> app unfit for use/testing process.
+						            high --> 'n' users affected by flaws in app..
+						            med. --> no users are affected but app has defects..
+						            low -->  tiny flaws like appearence distortion and all...
+
+							How it works -- > 
+								Developer --> Manager (Release Notes, Version no. , Req. Implemented) --> Smoke/Sanity Test....-- (if verified for criticality) --> To Tester(high,med., &low only) 
+			
+			
+
+
+				"Sys. T ". - Functional and N-functional aspects -=> 
+
+
+				"Exploratory T."  aka  Monkey Testing - random inputs and checking the behavior.(when we have no end user info about req's and cond's)
+
+				"Structural T."  - FrameWork TEst's
+
+				"Adhoc T." - Error Guessing Tech. --> testing without any plans and documentation. Simply Guessing and aiming to identify the flaw
+
+				
+
+			N-Functional T. ==> Off 36 Quality Factors/Attb's (verified by SQA)
+					Performance Test
+					Stress Test
+					Load  Test 
+					Reliablity Test
+					Compatiblity Test
+					Operablity Test
+
+
+
+
+		
+
+
+
+
+	#Levels Of Testing==> 
+
+		$#Note ==> 
+			Sys. Arch.  ---> 'n'  HLD (High Level design/designers) -- each --> 'n' LLD(Low Level Design) ,
+
+			BBT >> GBT >> WBT
+
+			1 --> Unit (LLD WBT),
+
+				 2 -->  Integration ( HLD WBT aka  Grey Box (GB) Testers ) - can also be done during development phase
+					if we have 4 modules m1 -> m2 -> m3 -> m4, if m3 is still under development, WBT will create a dummie functionality to test the rate of flow					
+					
+					Stub & Driver (Dummie Modules) --> creating a dummie module just to verify the result of some other module(caller).
+
+					When Modules are ready,we use
+					Approach-> 
+						Top Down --> use Stub(main module is ready, but the sub-modules are not)
+						Bottom Up --> use Driver(sub modules are ready,but the main is not)
+						Big Bang -->  
+
+
+
+				  	3--> System (BBT)*==> check functional and non functional aspects 
+							$#Note ==> 
+								if (aware of req's of end user)
+									sop(Sys test());
+								else if(no info's of end call)
+									sop(Exploratory Test());
+							
+						
+ 				              		4 --> System Integration -->  Sys To Sys (depends upon the type of Soft. Product) 
+								
+							5 --> User Acceptance (as per expection)
+
+
+			
+					
+						         
+
+
+
+
+
+
+
+
+ 5 ==> I/M
+
+
+
+
+

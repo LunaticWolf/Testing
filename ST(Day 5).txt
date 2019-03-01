@@ -1,0 +1,25 @@
+#Fundamentals of Test Closure
+
+		Test Closure -->
+				-->  Test Summary Report >>
+							 - after n'Cycles 
+							 - contains status report for n test cases(Pass/Fail/blocked/.. etc) 
+
+				-->  AQI/PQI >> (Stablity) 
+							 - Application/Project Quality Index(AQI) >> contains Info like - 
+															- No. of Test Cases Executed
+															- No. of Defects found
+															- No. of defects fixed(found in earlier build/cycle)
+															- Status of each Defect(High, Low..)
+		
+
+
+				- Retrospection >> Sharing relevant test experience. (Suggestions)
+												   - Approach Followed(Testing)
+												   - Techniques(Test Data)
+												   - Whether everything went as planned
+												   - Critical issues
+												   - Sol'n that helped solving critical issues.
+												   - Goal met? 
+
+		Project Closure.
