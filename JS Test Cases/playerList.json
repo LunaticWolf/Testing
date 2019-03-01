@@ -1,0 +1,11 @@
+{
+	"playerList":
+	[	
+		{ "pid":"p01","name":"P1", "role":"Batsman" },
+		{ "pid":"p02","name":"P2", "role":"Bowler"},
+		{ "pid":"p03","name":"P3", "role":"Fielder" },
+		{ "pid":"p04","name":"P4", "role":"Wicket keeper" },
+		{ "pid":"p05","name":"P5", "role":"Batsman" }
+	]
+	
+}

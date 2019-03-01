@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> player List using json</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+	
+
+			$(document).ready(
+								function()
+								{
+									$("#getDetails").click(
+														function()
+														{
+
+															var tableText = "<table id = 'teamDetails'>" + 
+																			"<tr> <thead><th colspan='3'> Player Details </th></thead></tr> " +
+																			"<tr>" +
+																				"<th colspan='3'>Player </th>" +
+																				"<th>Player Name</th>"  +
+																				"<th>Player Role</th>" +
+																			"</tr><tbody>"	;	
+
+
+															$.getJSON("playerList.json" , function(result)
+																							{
+																								
+																								$(result["playerList"]).each(function(i, objField)
+																								              {
+
+																								              		var pid = objField["pid"];
+																								              		var name = objField["name"];
+																								              		var role = objField["role"];
+
+																								              		tableText+=	"<tr>"+
+																																	"<td>" + pid + "</td>" +
+																																	"<td>" +  name + "</td>" + 
+																																	"<td>" + role + "</td>" +
+																																"</tr>";
+																												});
+																								tableText+="</tbody></table>";
+																								$("div").html(tableText);
+
+																							}
+																	);
+
+															});
+								});
+
+</script>
+</head>
+
+
+<body>
+
+
+<button type="button" id="getDetails"> Press </button>
+
+<div>
+	
+</div>
+
+
+</body>
+</html>

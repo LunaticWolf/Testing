@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playerData>
+	<player id="p101">
+		<pid>p101</pid>
+		<name> A </name>
+		<role> Batsman </role>
+		<battingstyle> Right Handed</battingstyle>
+		<bowlingstyle>Right Spinner</bowlingstyle>
+		<score>350</score>
+	</player>
+	
+	<player id="p102">
+		<pid>p102</pid>
+		<name> B </name>
+		<role> Bowler </role>
+		<battingstyle> None </battingstyle>
+		<bowlingstyle> Spinner </bowlingstyle>
+		<score> 0 </score>
+	</player>
+	
+	
+	<player id="p103">
+		<pid>p103</pid>
+		<name> C </name>
+		<role> Batsman </role>
+		<battingstyle> Left Handed</battingstyle>
+		<bowlingstyle> None </bowlingstyle>
+		<score> 300 </score>
+	</player>
+	
+	<player id="p104">
+		<pid>p104</pid>
+		<name> D </name>
+		<role> Batsman </role>
+		<battingstyle> Left Handed</battingstyle>
+		<bowlingstyle> Fast Pacer</bowlingstyle>
+		<score> 250 </score>
+	</player>
+	
+	<player id="p105">
+		<pid>p105</pid>
+		<name> E </name>
+		<role> Spinner </role>
+		<battingstyle> Right Handed</battingstyle>
+		<bowlingstyle> Pacer </bowlingstyle>
+		<score> 250 </score>
+	</player>
+	
+	
+</playerData>

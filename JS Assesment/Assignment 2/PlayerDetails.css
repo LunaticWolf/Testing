@@ -1,0 +1,60 @@
+#dataDisplay
+	{
+			width:80%;
+			font-family: Comic Sans MS;	
+			font-size: 20px;
+			position:sticky;
+			left:70px;
+			padding: 10px;
+			text-align: left;
+	}
+	
+	table
+	{
+			width:90%;
+	}
+	fieldset
+	{
+		position: fixed;	
+		cursor: context-menu;
+	}
+	input[type=text],input[type=number] 
+	{
+ 	 	width: 80%;
+  		padding: 5px;
+  		border: 1px solid #ccc;
+  		border-radius: 4px;
+  		cursor: text;
+	}
+	#addPlayer
+	{
+  		background-color: #000;
+  		color: white;
+  		padding: 5px 10px;
+  		border: none;
+  		border-radius: 50px;
+  		cursor: pointer;
+  		float: inherit;
+  	}
+  	#reset
+  	{
+  		background-color: grey;
+  		color: white;
+  		padding: 5px 10px;
+  		border: none;
+  		border-radius: 50px;
+  		cursor: pointer;
+  		float: inherit;
+  	}
+	#removePlayer
+	{
+		background-color: #069;
+		color: white;
+		padding: 5px 20px;
+  		border: none;
+  		border-radius: 50px;
+  		cursor: pointer;
+  		float: right;
+  		position: sticky;
+  	
+	}

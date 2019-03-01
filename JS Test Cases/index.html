@@ -1,0 +1,85 @@
+
+<html>
+<head>
+	<title> Player Details</title>
+
+<script>
+	function loadDetails()
+	{
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() 
+									{
+											//Page status should be either '4' or '200'
+											if(this.readyState == 4 || this.readyState == 200)
+												{
+													showDetails(this);
+												}
+									};
+									
+			
+		var x = document.getElementsByTagName('').innerText;
+
+		xmlhttp.open("GET", "Player.xml", true);
+		xmlhttp.send();		
+	}
+	
+	
+	function showDetails(xmlhttp)
+	{
+		var xmlDoc = xmlhttp.responseXML;
+		var playerObj = xmlDoc.getElementsByTagName("player");
+		var table = "<table border=1 id='playerTable'>"+ 
+						"<tbody>";
+		
+					table+= "<tr>" + 
+									"<th>Player Id</th>" + 
+									"<th>Name </th>" + 
+									"<th>Role</th>" + 
+									"<th>Batting Style</th>"+ 
+									"<th>Bowling Style</th>"+ 
+									"<th>Score</th>"+
+							"</tr>";
+		
+		
+		
+		for{int i=0;i<playerObj.length;i++}
+		{
+			var playerId = playerObj[0].getElementByTagName("pid")[0].childNodes[0].nodeValue;
+			var playerName = playerObj[0].getElementByTagName("name")[0].childNodes[0].nodeValue;
+			var playerRole = playerObj[0].getElementByTagName("role")[0].childNodes[0].nodeValue;
+			var playerBat = playerObj[0].getElementByTagName("battingstyle")[0].childNodes[0].nodeValue;
+			var playerBowl = playerObj[0].getElementByTagName("bowlingstyle")[0].childNodes[0].nodeValue;
+			var playerScore = playerObj[0].getElementByTagName("score")[0].childNodes[0].nodeValue;
+			
+			
+			table+= "<tr class='item'>" +
+			             "<td>" + playerId + "</td>" +
+			             "<td>" + playerName + "</td>" + 
+			             "<td>" + playerRole + "</td>" + 
+			             "<td>" + playerBat + "</td>" + 
+			             "<td>" + playerBowl + "</td>" + 
+			             "<td>" + playerScore + "</td>" + 
+			             "</tr>";
+		}
+		
+		table+="<tbody></table>";
+		document.getElementById("playerDetails").innerHTML = table;
+		
+	}
+</script>
+</head>
+
+
+
+
+
+
+
+<body onload="loadDetails()">
+
+	<div id="playerDetails"><p> A</p></div>
+
+</body>
+
+
+</html>

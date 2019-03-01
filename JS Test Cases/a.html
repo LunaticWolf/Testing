@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Match Summary</title>
+<script src="Validation.js"></script>
+
+
+<style type="text/css">
+
+	span
+	{
+		color: red;	}
+
+	.err1
+	{
+		color: yellow;	
+	}
+</style>
+
+
+
+</head>
+<body>
+		<table style="background-color: gray">
+
+					<tr>
+						<td>Team A<span>*</span>
+						</td>
+						<td><input type="text" name="teamA" id="teamA" placeholder="Team A"><span id="errTeamA" class='err1'></span>
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td>Team B<span>*</span>
+						</td>
+						<td><input type="text" name="teamB" id="teamB" placeholder="Team B"><span id="errTeamB" class='err1'></span>
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td>Date<span>*</span>
+						</td>
+						<td><input type="text" id="date" placeholder="dd/mm/yyyy"><span id="errDate" class='err1'></span>
+						</td>
+					</tr>
+
+
+
+					<tr>
+						<td>Time<span>*</span>
+						</td>
+						<td><input type="text" name="time" id="time" placeholder="HH:mm:ss"><span id="errTime" class='err1'></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>Team A Score<span>*</span>
+						</td>
+						<td><input type="text" name="teamAscore" id="teamAscore" placeholder="Runs/Wkts"><span id="errTeamAscore" class='err1'></span>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>Team B Score<span>*</span>
+						</td>
+						<td><input type="text" name="teamBscore" id="teamBscore" placeholder="Runs/Wkts"><span id="errTeamBscore" class='err1'></span>
+						</td>
+					</tr>
+						<tr>
+							<td>
+								<input type="button" id="Save" value="Save" onclick="validation()"/>
+							</td>
+						</tr>
+</table>
+<br> <br>
+
+<h3> Winning Team: </h3><h3 id="winningTeam"> </h3>
+</body>
+</html>

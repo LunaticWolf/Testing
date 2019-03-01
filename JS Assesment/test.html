@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript">
+	
+function validateMatchDate(inputDate)
+{
+	
+	var splitDate = document.getElementById('matchDate').value.split("/");
+	var dateFormat = splitDate[1] + "/" + splitDate[0] + "/" + splitDate[2];
+	var status = false;
+	var date = new Date(dateFormat);
+	
+	if(!(isNaN(date)))
+		{	
+				var day = splitDate[0];
+				var month = splitDate[1];
+				var year = splitDate[2];
+
+				var days = [ 31,28,31,30,31,30,31,31,30,31,30,31 ];
+			
+
+				if(year.length==4) 
+				{
+					if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
+						days[1] = 29;
+						
+
+
+					if(month.length==2 && month>0 && month<13)
+						if(day<=days[month.length-1])
+								status = true;		
+					
+				}
+
+			
+			if(status==false)
+				document.getElementById('errMessageforDate').innerText = "Invalid Date";
+			else
+				document.getElementById('errMessageforDate').innerText = "";
+
+			
+		}
+
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+<input type="text" name="MatchDate" id="matchDate" placeholder="dd/MM/yyyy" title="Enter Match Date"/>  <i id="errMessageforDate"> </i> 
+<br>
+<button type="button" onclick="validateMatchDate()"> Press </button>
+
+</body>
+</html>

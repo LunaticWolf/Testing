@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> Match Summary</title>
+
+<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+<script type="text/javascript" >
+	
+
+
+function validate()
+{	
+	var scoreCards = [];
+
+	var scoreA = document.getElementById('teamAScore').value;
+	scoreCards.push(validateScoreFormat(scoreA));
+	
+	var scoreCard1 = ScoreCards[0]["Wkts"];
+	alert("3 - " + scoreCard1);
+
+	var scoreB = document.getElementById('teamBScore').value;
+	scoreCards.push(validateScoreFormat(scoreB));
+
+	
+	
+}
+
+function validateScoreFormat(inputScore)
+{
+	var splitScore = inputScore.split("/");
+
+	var runs = splitScore[0];
+	var wkts = splitScore[1];
+
+	var gameStatus = false;
+
+	if(runs.length<4 && runs>=0 && wkts>0 && wkts<=10)
+		gameStatus = true;
+
+
+	if(gameStatus==false)
+		document.getElementById('errMessageforScore').innerText = "Invalid Score Format";
+
+	var scoreCard = { Wkts:wkts, Runs:runs };
+	alert("1 - " + scoreCard["Wkts"]);
+	alert("2 - " + scoreCard["Runs"]);
+	/*alert(wkts,runs);
+	var scoreCard = [ Wkts:wkts , Runs:runs ];
+	alert("ScoreCard - " + scoreCard);*/
+	return scoreCard;
+
+}
+
+
+</script>
+</head>
+
+
+<body>
+
+	 
+		 <fieldset>
+				<legend> Match Summary </legend> 
+
+				<table>
+					<thead>
+						<th> Team Details </th>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								Team A* 
+							</td>
+							<td>
+								<input type="text" name="TeamA" id="teamA" placeholder="Team A" title="Enter Team A Name"/> 
+							</td>
+							 <td>
+								 <i id="errMessageforTeam"> </i> 
+							</td>
+												
+
+						</tr>
+
+						<tr>
+							<td>
+								Team B*
+							</td>
+							<td>
+								<input type="text" name="TeamB" id="teamB" placeholder="Team B" title="Enter Team B Name"/>  
+							</td>
+							<!-- <td>
+								 <p id="errMessageforTeam"> </p> 
+							</td> -->
+							
+						</tr>
+
+						<tr>
+							<td>
+								Date*
+							</td>
+							<td>
+								<input type="text" name="MatchDate" id="matchDate" placeholder="dd/MM/yyyy" title="Enter Match Date"/>
+							</td>
+							<td>
+								 <i id="errMessageforDate"> </i> 
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>
+								Time*
+							</td>
+							<td>
+								<input type="text" name="PlayTime" id="playTime" placeholder="hh:mm:ss" title="Enter Time Details"/>
+							</td>
+							<td>
+								<i id="errMessageforTime"> </i>
+							</td>
+						</tr>
+
+
+						<tr>
+							<td>
+								Team A Score*
+							</td>
+							<td>
+								<input type="text" name="TeamAScore" id="teamAScore" placeholder="Runs/wkts" title="Enter Team A Score"/>
+							</td>
+							<td>
+								<i id="errMessageforScore"> </i>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								Team B Score*		
+							</td>
+							<td>
+								<input type="text" name="TeamBScore" id="teamBScore" placeholder="Runs/wkts" title="Enter Team B Score" />
+							</td>
+							<td>
+								<i id="errMessageforScore"></i>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<button type="button" id="btn" onclick="validate()"> Save </button>
+							</td>
+						<td>
+								<input type="reset" name="ResetDetails" id="resetDetails" value="Reset"/>
+							</td> 
+						</tr>
+
+
+					</tbody>
+
+				</table>
+
+
+
+
+	</fieldset>
+
+
+
+</body>
+</html>

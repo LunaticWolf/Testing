@@ -1,0 +1,11 @@
+{
+	"teamList":
+	[	
+		{ "teamName":"CSK", "runRate":"2.25", "points":"100", "rank":"1" },
+		{ "teamName":"RCB", "runRate":"4.0", "points":"50", "rank":"4" },
+		{ "teamName":"DD", "runRate":"2.00", "points":"90", "rank":"2" },
+		{ "teamName":"KKR", "runRate":"5.0", "points":"60", "rank":"5" },
+		{ "teamName":"MI", "runRate":"3.25", "points":"80", "rank":"3" }
+	]
+	
+}

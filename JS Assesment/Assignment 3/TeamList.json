@@ -1,0 +1,17 @@
+{
+	"teamList":
+	[	
+		{ "teamName":"CSK", "runRate":"2.25", "points":"100", "rank":"3" },
+		{ "teamName":"RCB", "runRate":"4.0", "points":"50", "rank":"4" },
+		{ "teamName":"DD", "runRate":"2.00", "points":"90", "rank":"8" },
+		{ "teamName":"KKR", "runRate":"5.0", "points":"170", "rank":"1" },
+		{ "teamName":"MI", "runRate":"3.25", "points":"80", "rank":"5" },
+		{ "teamName":"DC", "runRate":"4.25", "points":"200", "rank":"2" },
+		{ "teamName":"KXI", "runRate":"2.25", "points":"40", "rank":"7" },
+		{ "teamName":"SH", "runRate":"2.00", "points":"30", "rank":"10" },
+		{ "teamName":"RPG", "runRate":"2.00", "points":"35", "rank":"9" },
+		{ "teamName":"RR", "runRate":"3.15", "points":"80", "rank":"6" }
+
+	]
+	
+}

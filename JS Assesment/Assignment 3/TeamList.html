@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> player List using json</title>
+
+<style type="text/css">
+/*	
+	div
+	{
+		position: relative;
+		left:400px;
+		top: 150px;
+	}*/
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+	
+
+			$(document).ready(
+								function()
+								{
+									$("#getDetails").click(
+														function()
+														{
+
+															var tableText = "<table id = 'teamDetails'>" + 
+																			
+																			"<tr>" +
+																				"<th onclick='sortTable(0)'>Team </th>" +
+																				"<th onclick='sortTable(1)'>Run-Rate</th>"  +
+																				"<th onclick='sortTable(2)'>Points</th>" +
+																				"<th onclick='sortTable(3)'>Rank</th>" +
+																			"</tr><tbody>"	;	
+
+
+															$.getJSON("TeamList.json" , function(result)
+																							{
+																								
+																								$(result["teamList"]).each(function(i, objField)
+																								              {
+
+																								              		var teamName = objField["teamName"];
+																								              		var runRate = objField["runRate"];
+																								              		var points = objField["points"];
+																								              		var rank = objField["rank"];
+
+																								              		tableText+=	"<tr>"+
+																																	"<td onclick='sortTable(0)'>" + teamName + "</td>" +
+																																	"<td onclick='sortTable(1)'>" +  runRate + "</td>" + 
+																																	"<td onclick='sortTable(2)'>" + points + "</td>" +
+																																	"<td onclick='sortTable(3)'>" + rank + "</td>" +
+																																"</tr>";
+																												});
+																								tableText+="</tbody></table>";
+																								$("div").html(tableText);
+
+																							}
+																	);
+
+															});
+								});
+
+ 
+
+
+
+	function sortTable(n) 
+	{
+  			
+  		var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  
+  		table = document.getElementById("teamDetails");
+  		switching = true;
+  	 	dir = "asc"; 
+  
+ 		
+ 		while (switching) 
+  		{
+    
+ 	   			switching = false;
+   				rows = table.rows;
+   
+ 			    for (i = 1; i < (rows.length - 1); i++) 
+ 			    {
+      
+	     			shouldSwitch = false;
+	     
+	      			x = rows[i].getElementsByTagName("TD")[n];
+	      			y = rows[i + 1].getElementsByTagName("TD")[n];
+	      
+	     			 if(isNaN(Number(x.innerHTML)) && isNaN(Number(y.innerHTML)))
+	     			 {
+			     			 	if (dir == "asc") 
+			     			 	{
+			        				if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) 
+			        			{
+			          
+			         				 shouldSwitch= true;
+			          				 break;
+			     		   		 }
+			      
+			      			 } 
+			      			
+			      				else if (dir == "desc") 
+			      				{
+			        				if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) 
+			        			{
+			          				shouldSwitch = true;
+			         				 break;
+			        			}
+			      			}
+	     			 }
+	     			 else
+	     			 {
+	     			 		if (dir == "asc") 
+	     			 		{
+	        					if (Number(x.innerHTML) > Number(y.innerHTML)) 
+	        					{
+	          
+	         						 shouldSwitch= true;
+	          						 break;
+	     		   		 		}
+	      
+	      					 } 
+	      					else if (dir == "desc") 
+	      					{
+	        					if (Number(x.innerHTML) < Number(y.innerHTML)) 
+	        					{
+	          
+	          						shouldSwitch = true;
+	         						 break;
+	        					}
+	      					}
+	     			 }
+    			}
+
+
+	    		if (shouldSwitch) 
+	    		{
+			     
+			      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+			      switching = true;
+			      key: "value", 
+	     		  switchcount ++;      
+	    		} 
+	    		else 
+	    		{
+	      			if (switchcount == 0 && dir == "asc") 
+	     	 		{
+	        			dir = "desc";
+	        			switching = true;
+	      			}
+	    		}
+ 		 }
+}
+
+
+
+
+</script>
+</head>
+
+
+<body>
+
+
+<button type="button" id="getDetails"> Press </button>
+<!-- <button type="button" onclick='sortTable(0)'> T0 </button>
+<button type="button" onclick='sortTable(1)'> T1 </button>
+<button type="button" onclick='sortTable(2)'> T2 </button>
+<button type="button" onclick='sortTable(3)'> T3 </button> -->
+<div>
+	
+</div>
+
+
+</body>
+</html>
+

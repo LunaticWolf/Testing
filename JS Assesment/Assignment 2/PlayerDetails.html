@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PlayerList</title>
+	<link rel="stylesheet" type="text/css" href="PlayerDetails.css">
+	<script type="text/javascript" src="PlayerDetails.js"> </script>
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function()
+									{
+  										$("#addPlayer").click(function()
+  																	{
+    																	$("#o").fadeIn(10000);
+  																	});
+									});
+</script> -->
+</head>
+<body>
+
+	<fieldset>
+		<legend><b>Player List</b></legend>
+		<!-- <form name="myForm" onsubmit="ValidateEntry()"> -->
+		<form name="myForm">
+		<!-- 	<p id="o"> Yo </p> -->
+			<table id="dataInput">
+				<thead>
+					<th>
+						<input type="text" name="PlayerName" id="playerName" placeholder="Player Name" title="Enter Player Name" required=  />
+					</th>
+					<th>
+						<input type="number" name="MatchesPlayed" id="matchesPlayed" placeholder="Matches" title="Enter No. of Matches Played" required="Please fill in the Details" />
+					</th>
+					<th>
+						<input type="number" name="InningsPlayed" id="inningsPlayed" placeholder="Innings" title="No. of Innings Plahyed" required ="Please fill in the Details" />
+					</th>
+					<th>
+						<input type="number" name="RunsScored" id="runsScored" placeholder="Runs" title="Enter Score" required="Please fill in the Details" />
+					</th>
+					<th>
+						<input type="button" name="AddPlayer" id="addPlayer" value="+ Add Player" " onclick="ValidateEntry()" />
+					</th>
+					<th>
+						<input type="reset" name="Reset" id="reset" value="Reset" />
+					</th>
+				</thead>
+			</table>
+		</form>
+			<hr>
+
+			<table id="dataDisplay">
+				<thead>
+					<th>
+						Select
+					</th>
+					<th>
+						Name:
+					</th>
+					<th>
+						Matches:
+					</th>
+					<th>
+						Innings:
+					</th>
+					<th>
+						Runs:
+					</th>
+				</thead>
+				<tbody id="playerAdded">
+					
+				</tbody>
+			</table>
+<br>
+			<button type="button" name="RemovePlayer" id="removePlayer" onclick="removePlayerDetails()">  - Remove Player </button>
+
+
+	</fieldset>
+
+</body>
+</html>

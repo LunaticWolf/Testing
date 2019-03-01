@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title> Team Details </title>
+	
+		<!-- External CSS File link -->
+		<link rel="stylesheet" type="text/css" href="TeamDetails.css">
+		
+		<!-- External Js file link -->
+		 <script type="text/javascript" src="TeamDetails.js"></script>
+
+
+	<body>
+		<form>
+			<fieldset>
+					<legend> <h1> Match Summary </h1></legend>
+
+					<table>
+						<thead>
+							<th> Match Details </th>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>
+									Team A<span class="star">*</span>: 
+								</td>
+								<td>
+									<input type="text" name="TeamA" id = "teamA" placeholder="Enter Team A" title="Enter TeamA" required/>
+								</td>
+								<td>
+									<i class="errMessageforTeam"></i>
+								</td>
+							</tr>
+				
+							<tr>
+								<td>
+									Team B<span class="star">*</span>:
+								</td>
+								<td>
+									<input type="text" name="TeamB" id = "teamB" placeholder="Enter Team B" title="Enter TeamB" required/>
+								</td>
+								<td>
+									<i class="errMessageforTeam"></i>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									Date<span class="star">*</span>:
+								</td>
+								<td>
+									<input type="text" name="Date" id = "matchDate" placeholder="dd/MM/yyyy" title="Enter Match Date" required/>
+								</td>
+								<td>
+									<i class="err" id="errMessageforDate"> </i>
+								</td>
+							</tr>
+				  
+				  			<tr>
+				  				<td>
+				  					Time<span class="star">*</span>:
+				  				</td>
+				  				<td>
+				  					<input type="text" name="Time" id = "playTime" placeholder="HH:mm:ss" title="Enter Time Details" required/>
+				  				</td>
+				  				<td>
+				  					<i class="err" id="errMessageforTime"> </i>
+				  				</td>
+				  			</tr>
+						
+							<tr>
+								<td>
+									Score A<span class="star">*</span>:
+								</td>
+								<td>
+									<input type="text" name="ScoreA" id="scoreA" placeholder="Runs/wkts" title="Enter Team-A Score" required/>
+								</td>
+								<td>
+									<i class="errMessage"></i>
+								</td>
+							</tr>
+							
+							<tr>
+								<td >
+									Score B<span class="star">*</span>:
+								</td>
+								<td>
+									<input type="text" name="ScoreB" id="scoreB" placeholder="Runs/wkts" title="Enter Team-B Score"/ required>	
+								</td>
+								<td>
+									<i class="errMessage"></i>
+								</td>
+							</tr>
+					
+							<tr>
+								<td></td>
+								<td id="btnSpacing">
+											<input type="button" id="btn" value="Save" onclick="validateDetails()" />
+										
+											<input type="reset" name="Reset" id="reset" value="Reset" />
+									
+								</td>
+							</tr>
+					</tbody>
+				</table> 
+				
+
+				<br><br><br>
+				<h3> Winner - <i id="winningTeam">  </i> </h3>
+
+			</fieldset>
+		</form>
+
+	</body>
+</html>
